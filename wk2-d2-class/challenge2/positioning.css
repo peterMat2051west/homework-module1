@@ -1,0 +1,37 @@
+/* CSS */
+body {
+   margin: 0;
+   padding: 0;
+   font-size: 1.1em;
+   background-color: #94d7e3;
+}
+
+h1 {
+   font-family: Futura, Helvetica, Arial, 'sans-serif';
+   margin-top: 0;
+}
+
+#wrapper {
+   margin: 0 auto;
+   padding: 10px 30px;
+   width: 666px;
+   background-color: white;
+   height: 100%;
+   border-left: 2px solid black;
+   border-right: 2px solid black;
+}
+
+.photos {
+   text-align: center;
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+img {
+   border: 2px solid black;
+}
+
+img:last-of-type {
+   transform: rotate(10deg);
+   margin-left: -40px;
+}

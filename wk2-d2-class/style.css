@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: url(header.jpg) no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    font-size: 36px;
+    color: #fff;
+    font-weight: bold;
+    font-family: arial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    background-color: rgb(50, 50, 50);
+    text-align: center;
+    padding-top: 10px;
+}
+
+nav li {
+    list-style-type: none;
+    display: inline;
+}
+
+nav a:link,
+nav a:visited {
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a:hover {
+    color: #f9b;
+}
+
+nav a:active {
+    color: #f00;
+}
+
+
+main {
+    flex: 1;
+    margin: 50px 150px;
+}
+
+main h1 {
+    color: #336699;
+    font-family: georgia;
+}
+
+table {
+    margin-top: 35px;
+}
+
+table,
+caption,
+th,
+td {
+    border: 1px solid #000;
+}
+
+th,
+td {
+    width: 150px;
+    height: 35px;
+    text-align: center;
+}
+
+caption {
+    text-transform: uppercase;
+    font-weight: 600;
+    height: 40px;
+    padding-top: 15px;
+    color: #753a30;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+}
+
+fieldset {
+    padding: 20px 30px 30px 30px;
+    border: none;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+legend {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(129, 141, 179);
+    padding: 0 10px;
+}
+
+input {
+    width: 300px;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: rgb(129, 141, 179);
+}
+
+input[type="radio"] {
+    width: 25px;
+    padding: 0;
+    border: none;
+}
+
+input[type="radio"]+label {
+    display: inline;
+    margin: 0 15px 0 0;
+    font-weight: normal;
+}
+
+select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea {
+    width: 300px;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 25px 0 10px 0;
+    width: 120px;
+    padding: 10px;
+    background-color: rgb(129, 141, 179);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(100, 112, 150);
+}
+
+footer {
+    height: 100px;
+    background-color: #333;
+    text-align: center;
+    padding-top: 20px;
+    color: #aaa;
+}
