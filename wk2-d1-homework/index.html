@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Great Cliff's</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+        /* =====================
+           HEADER
+        ===================== */
+        #home header {
+            background: url(images/greatCliffs.png) center center no-repeat;
+            background-size: cover;
+            height: 250px;
+        }
+
+        .main-header {
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 800px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            overflow: hidden;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .main-menu {
+            float: right;
+            padding-top: 50px;
+        }
+
+        /* =====================
+           NAVIGATION
+        ===================== */
+        nav li {
+            list-style-type: none;
+            display: inline;
+            border-right: 1px solid #555;
+        }
+
+        nav li:last-child {
+            border-right: none;
+        }
+
+        nav a:link,
+        nav a:visited {
+            text-decoration: none;
+            color: #fff;
+            padding: 0 15px;
+        }
+
+        nav a:hover {
+            color: #9ed034;
+        }
+
+        nav a:active {
+            color: #ccc;
+        }
+
+        .active a:link,
+        .active a:visited {
+            background-color: #9ed034;
+            color: #000;
+            padding: 4px 15px;
+        }
+
+        /* =====================
+           MAIN
+        ===================== */
+        main {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #9ed034;
+            padding: 20px 40px;
+        }
+
+        main h2 {
+            font-size: 2em;
+        }
+
+        main p {
+            color: #333;
+        }
+
+        /* =====================
+           PARTNERS (SECTION)
+        ===================== */
+        #partners {
+            list-style-type: none;
+            text-align: center;
+            padding: 20px 0;
+            margin: 0;
+        }
+
+        #partners .partner {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        #partners .partner img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        /* =====================
+           FOOTER
+        ===================== */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 40px;
+            overflow: hidden;
+        }
+
+        .copy {
+            float: left;
+        }
+
+        .social {
+            float: right;
+        }
+
+        #disclaimer {
+            clear: both;
+            color: #aaa;
+            font-size: 12px;
+            border-top: 1px solid #555;
+            padding-top: 10px;
+        }
+
+        /* =====================
+           SOCIAL MEDIA ICONS (Font Awesome)
+        ===================== */
+        .social a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 12px 14px;
+            text-decoration: none;
+            font-size: 22px;
+        }
+
+        .social a:hover {
+            background-color: #9ed034;
+            color: #000;
+        }
+
+        .social a.fa-facebook { background-color: #3b5998; border-radius: 50%; }
+        .social a.fa-twitter  { background-color: #1da1f2; border-radius: 50%; }
+        .social a.fa-instagram { background-color: #c13584; border-radius: 50%; }
+
+        .social a.fa-facebook:hover { background-color: #2d4373; }
+        .social a.fa-twitter:hover  { background-color: #0d8ecf; }
+        .social a.fa-instagram:hover { background-color: #8a1a5a; }
+
+    </style>
+</head>
+
+<body id="home">
+    <div id="container">
+
+        <header>
+            <div class="main-header">
+                <div class="logo">
+                    <img src="images/westcliffHeaderLogo.png" alt="Great Cliff's Logo" width="300">
+                </div>
+                <nav class="main-menu">
+                    <ul>
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <h2>Welcome to Great Cliff's</h2>
+            <h3>Building the Future</h3>
+            <p>We are dedicated to providing top-quality services and building
+                lasting relationships with our clients. Our team of experts is here to help you
+                achieve your goals.</p>
+            <p>Explore our website to learn more about what we offer and how we can
+                help you succeed.</p>
+        </main>
+
+        <section>
+            <ul id="partners">
+                <li class="partner">
+                    <img src="images/partners/partner1.png" alt="Partner 1">
+                </li>
+                <li class="partner">
+                    <img src="images/partners/partner2.png" alt="Partner 2">
+                </li>
+                <li class="partner">
+                    <img src="images/partners/partner3.png" alt="Partner 3">
+                </li>
+                <li class="partner">
+                    <img src="images/partners/partner4.png" alt="Partner 4">
+                </li>
+                <li class="partner">
+                    <img src="images/partners/partner5.png" alt="Partner 5">
+                </li>
+                <li class="partner">
+                    <img src="images/partners/partner6.png" alt="Partner 6">
+                </li>
+            </ul>
+        </section>
+
+        <footer>
+            <div id="nondisclaimer">
+                <div class="copy">
+                    <p>&copy; 2026 Great Cliff's. All rights reserved.</p>
+                </div>
+                <div class="social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                </div>
+            </div>
+            <div id="disclaimer">
+                <p>The information provided on this website is for general
+                    informational purposes only. All information on the site is provided in good faith,
+                    however we make no representation or warranty of any kind regarding the accuracy
+                    or completeness of any information on the site.</p>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>

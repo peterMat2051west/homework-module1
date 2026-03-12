@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Great Cliff's - Activities</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+        /* =====================
+           HEADER
+        ===================== */
+        header {
+            background: url(images/greatCliffs.png) center center no-repeat;
+            background-size: cover;
+            height: 250px;
+        }
+
+        .main-header {
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 800px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            overflow: hidden;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .main-menu {
+            float: right;
+            padding-top: 50px;
+        }
+
+        /* =====================
+           NAVIGATION
+        ===================== */
+        nav li {
+            list-style-type: none;
+            display: inline;
+            border-right: 1px solid #555;
+        }
+
+        nav li:last-child {
+            border-right: none;
+        }
+
+        nav a:link,
+        nav a:visited {
+            text-decoration: none;
+            color: #fff;
+            padding: 0 15px;
+        }
+
+        nav a:hover {
+            color: #9ed034;
+        }
+
+        nav a:active {
+            color: #ccc;
+        }
+
+        .active a:link,
+        .active a:visited {
+            background-color: #9ed034;
+            color: #000;
+            padding: 4px 15px;
+        }
+
+        /* =====================
+           MAIN
+        ===================== */
+        main {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px 40px;
+        }
+
+        /* =====================
+           FOOTER
+        ===================== */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 40px;
+            overflow: hidden;
+        }
+
+        .copy {
+            float: left;
+        }
+
+        .social {
+            float: right;
+        }
+
+        #disclaimer {
+            clear: both;
+            color: #aaa;
+            font-size: 12px;
+            border-top: 1px solid #555;
+            padding-top: 10px;
+        }
+
+        .social a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 12px 14px;
+            text-decoration: none;
+            font-size: 22px;
+        }
+
+        .social a.fa-facebook { background-color: #3b5998; border-radius: 50%; }
+        .social a.fa-twitter  { background-color: #1da1f2; border-radius: 50%; }
+        .social a.fa-instagram { background-color: #c13584; border-radius: 50%; }
+
+        .social a.fa-facebook:hover { background-color: #2d4373; }
+        .social a.fa-twitter:hover  { background-color: #0d8ecf; }
+        .social a.fa-instagram:hover { background-color: #8a1a5a; }
+
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+        <header>
+            <div class="main-header">
+                <div class="logo">
+                    <img src="images/westcliffHeaderLogo.png" alt="Great Cliff's Logo" width="300">
+                </div>
+                <nav class="main-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active"><a href="activities.html">Activities</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <h1>Activities</h1>
+            <p>There are many planned activities at all the cliff sites. Some are scheduled daily,
+                weekly, monthly and yearly. These activities are not however run by the state park and
+                recreational department. They are operated and manage by private vendors but are partners
+                with the state department. Therefore, for schedule inquiries or information, please contact
+                them directly. For a list of activities, please refer to the table below:</p>
+
+            <table border="1">
+                <caption>Activities at the Cliffs</caption>
+                <thead>
+                    <tr>
+                        <th>Activity</th>
+                        <th>West Cliff</th>
+                        <th>North Cliff</th>
+                        <th>East Cliff</th>
+                        <th>South Cliff</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hiking</td>
+                        <td>College Hikes</td>
+                        <td>Family Fun</td>
+                        <td>Treasure Trails</td>
+                        <td>Canyon Explorer</td>
+                    </tr>
+                    <tr>
+                        <td>Kayak</td>
+                        <td>Western Kayak Meetup</td>
+                        <td>Not Available</td>
+                        <td>Youth Kayaking</td>
+                        <td>Kayak Down</td>
+                    </tr>
+                    <tr>
+                        <td>Skydiving</td>
+                        <td>Seacliff Diving</td>
+                        <td>Sky is the limit</td>
+                        <td>Not Available</td>
+                        <td>Sky Diving for Beginners</td>
+                    </tr>
+                    <tr>
+                        <td>Biking</td>
+                        <td>Bicycle for One</td>
+                        <td>Not Available</td>
+                        <td>Bike Meetup Group</td>
+                        <td>Not Available</td>
+                    </tr>
+                    <tr>
+                        <td>Camping</td>
+                        <td>Youth Camp</td>
+                        <td>Rent a Tent</td>
+                        <td>Campground Adventure</td>
+                        <td>Sunset Camping</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+        <footer>
+            <div id="nondisclaimer">
+                <div class="copy">
+                    <p>&copy; 2026 Great Cliff's. All rights reserved.</p>
+                </div>
+                <div class="social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                </div>
+            </div>
+            <div id="disclaimer">
+                <p>The information provided on this website is for general
+                    informational purposes only. All information on the site is provided in good faith,
+                    however we make no representation or warranty of any kind regarding the accuracy
+                    or completeness of any information on the site.</p>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>
