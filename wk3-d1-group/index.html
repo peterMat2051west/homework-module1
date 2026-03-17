@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Recipe Time</title>
+    <meta charset="UTF-8">
+    <title>Recipe Time</title>
 
-<style>
-body{
-    font-family: Arial;
-    text-align:center;
-    margin-top:50px;
-}
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
 
-.recipe{
-    border:1px solid black;
-    width:350px;
-    margin:auto;
-    padding:20px;
-}
-</style>
+        .recipe {
+            border: 1px solid black;
+            width: 350px;
+            margin: auto;
+            padding: 20px;
+        }
+    </style>
 
 </head>
 
 <body>
 
-<h1>Today's Recipe</h1>
+    <h1>Today's Recipe</h1>
 
-<div id="output"></div>
+    <div id="output"></div>
 
-<script>
+    <script>
 
-function showRecipe(){
+        function showRecipe() {
 
-let hour = new Date().getHours();
-let output = document.getElementById("output");
+            let hour = new Date().getHours();
+            let output = document.getElementById("output");
 
-if(hour < 17){
+            if (hour < 17) {
 
-output.innerHTML =
-`<div class="recipe">
+                output.innerHTML =
+                    `<div class="recipe">
 <h2>Lunch Recipe</h2>
 <ol>
 <li>Prepare burger patty</li>
@@ -48,11 +49,11 @@ output.innerHTML =
 </ol>
 </div>`;
 
-}else{
+            } else {
 
-output.innerHTML =
-`<div class="recipe">
-<h2>Dinner Recipe</h2>
+                output.innerHTML =
+                    `<div class="recipe">
+<h2>Dinner Pasta Recipe</h2>
 <ol>
 <li>Boil pasta</li>
 <li>Cook tomato sauce</li>
@@ -62,13 +63,14 @@ output.innerHTML =
 </ol>
 </div>`;
 
-}
+            }
 
-}
+        }
 
-showRecipe();
+        showRecipe();
 
-</script>
+    </script>
 
 </body>
+
 </html>
