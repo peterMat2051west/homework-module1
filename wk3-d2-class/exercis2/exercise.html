@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipe Challenge</title>
+</head>
+<body>
+
+  <h1 id="heading"></h1>
+  <div id="recipes"></div>
+
+  <script>
+    let now = new Date();
+    let hour = now.getHours();
+
+    let meal;
+
+    if (hour < 12) {
+      meal = "Breakfast";
+    } else if (hour < 18) {
+      meal = "Lunch";
+    } else {
+      meal = "Dinner";
+    }
+
+    document.getElementById("heading").innerHTML =
+      "You should cook " + meal + ". It's " + hour + ":00";
+
+    let recipes = [
+      {
+        title: "Breakfast Recipe",
+        steps: ["Prepare eggs", "Heat pan", "Cook eggs", "Serve"]
+      },
+      {
+        title: "Lunch Recipe",
+        steps: ["Prepare burger", "Grill meat", "Add toppings", "Serve"]
+      },
+      {
+        title: "Dinner Recipe",
+        steps: ["Season salmon", "Cook salmon", "Prepare salad", "Serve"]
+      }
+    ];
+
+    let output = "";
+
+    for (let i = 0; i < recipes.length; i++) {
+      output += "<h2>" + recipes[i].title + "</h2>";
+      output += "<ol>";
+
+      for (let j = 0; j < recipes[i].steps.length; j++) {
+        output += "<li>" + recipes[i].steps[j] + "</li>";
+      }
+
+      output += "</ol>";
+    }
+
+    document.getElementById("recipes").innerHTML = output;
+  </script>
+
+</body>
+</html>
