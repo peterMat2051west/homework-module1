@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 9</title>
+</head>
+<body>
+  <p>This example illustrates capturing texts entered in text boxes and then display on the page.</p>
+  <form id="myForm">
+    First name: <input type="text"><br><br>
+    Last name: <input type="text"><br><br>
+    Age: <input type="text"><br><br>
+    Email: <input type="text"><br><br>
+  </form>
+  <button onclick="myFunction()">Click to Display</button>
+  <p id="demo"></p>
+
+  <script>
+    function myFunction() {
+      var ref = document.getElementById("myForm");
+      var txt = "";
+      for (var i = 0; i < ref.length; i++) {
+        txt = txt + ref.elements[i].value + "<br>";
+      }
+      document.getElementById("demo").innerHTML = txt;
+    }
+  </script>
+</body>
+</html>

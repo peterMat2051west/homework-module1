@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 10</title>
+</head>
+<body>
+  <p>Click yes to see an example of a HTML image element.
+    <input type="radio" id="yes" name="choice" onclick="ShowHideDiv()"> Yes
+    <input type="radio" id="no" name="choice" onclick="ShowHideDiv()"> No
+  </p>
+  <div id="example" style="display:none">
+    &lt; img src="" alt="" width="" height="" &gt;
+  </div>
+
+  <script>
+    function ShowHideDiv() {
+      var checkYes = document.getElementById("yes");
+      var sample = document.getElementById("example");
+      if (checkYes.checked) {
+        sample.style.display = "block";
+      } else {
+        sample.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>

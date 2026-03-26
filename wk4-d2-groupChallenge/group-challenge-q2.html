@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Group Challenge Q2</title>
+</head>
+<body>
+  <div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Crater_Lake_winter_pano2.jpg" width="350" height="173" alt="Winter Lake Crater" id="crater">
+    <p id="title"></p>
+  </div>
+
+  <button id="vTitle">View Title</button>
+  <button id="cBtn">Change Season</button>
+
+  <script>
+    const img = document.getElementById("crater");
+    const title = document.getElementById("title");
+    const viewBtn = document.getElementById("vTitle");
+    const changeBtn = document.getElementById("cBtn");
+
+    viewBtn.addEventListener("click", function () {
+      title.textContent = img.alt;
+    });
+
+    changeBtn.addEventListener("click", function () {
+      if (img.alt === "Winter Lake Crater") {
+        img.src = "https://upload.wikimedia.org/wikipedia/commons/c/cd/In_and_around_Crater_Lake_Nat%27l_Park_-_%2828727192976%29.jpg";
+        img.alt = "Summer Lake Crater";
+      } else {
+        img.src = "https://upload.wikimedia.org/wikipedia/commons/0/01/Crater_Lake_winter_pano2.jpg";
+        img.alt = "Winter Lake Crater";
+      }
+      title.textContent = img.alt;
+    });
+  </script>
+</body>
+</html>

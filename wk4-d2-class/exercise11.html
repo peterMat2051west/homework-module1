@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 11</title>
+</head>
+<body>
+  <h1 id="heading1">Hello World!</h1>
+  <p>Demo on changing the style of a HTML element.</p>
+  <button onClick="changeStyle()">Change</button>
+
+  <script>
+    document.getElementById("heading1").style.color = "#00bc99";
+    document.getElementById("heading1").style.fontFamily = "Impact";
+    document.getElementById("heading1").style.fontSize = "2em";
+
+    function changeStyle() {
+      document.getElementById("heading1").style.letterSpacing = "0.2em";
+    }
+  </script>
+</body>
+</html>

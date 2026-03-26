@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 7</title>
+</head>
+<body>
+  <p>This example shows an event triggered when user tab away after entering text in a text field.</p>
+  Enter your name: <input type="text" id="fname" onchange="insertText()">
+  <p id="demo"></p>
+
+  <script>
+    function insertText() {
+      document.getElementById("demo").innerHTML = "Hello!";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 4</title>
+</head>
+<body>
+  <p>Click on the button to display the current date.</p>
+  <button onclick="displayDate()">Get Date &amp; Time</button>
+  <p id="demo"></p>
+
+  <script>
+    function displayDate() {
+      document.getElementById("demo").innerHTML = Date();
+    }
+  </script>
+</body>
+</html>
