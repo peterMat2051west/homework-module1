@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Splashes | Contact Us</title>
+  <title>Splashes | Locations</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -19,8 +19,8 @@
           <li class="nav-item"><a class="nav-link" href="swimming-lessons.html">Swimming Lessons</a></li>
           <li class="nav-item"><a class="nav-link" href="swim-programs.html">Swim Programs</a></li>
           <li class="nav-item"><a class="nav-link" href="adult-programs.html">Adult Programs</a></li>
-          <li class="nav-item"><a class="nav-link" href="locations.html">Locations</a></li>
-          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="locations.html">Locations</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
         </ul>
         <button class="btn btn-register" data-target="#authModal">Register / Sign In</button>
       </div>
@@ -53,11 +53,68 @@
     </div>
   </div>
 
-  <div class="page-header hero-image" style="background-image: url('images/contact-hero.jpeg');">
-    <div class="container"><h1>Contact Us</h1></div>
-  </div>
+  <section class="section" style="padding-top: 100px;">
+    <div class="container">
+      <h2 class="section-title">Our Locations</h2>
+      <div class="row">
+        <div class="col-md-4 col-sm-6 mb-4">
+          <h5 style="color:var(--deep-blue);">Orange County</h5>
+          <div class="location-list">
+            <a href="#">Irvine</a>
+            <a href="#">Huntington Beach</a>
+            <a href="#">Yorba Linda</a>
+            <a href="#">Turtle Rock</a>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <h5 style="color:var(--deep-blue);">San Gabriel Valley</h5>
+          <div class="location-list">
+            <a href="#">Altadena</a>
+            <a href="#">Arcadia</a>
+            <a href="#">Glendora</a>
+            <a href="#">Pasadena</a>
+            <a href="#">West Covina</a>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <h5 style="color:var(--deep-blue);">Silicon Valley</h5>
+          <div class="location-list">
+            <a href="#">San Jose Almaden</a>
+            <a href="#">San Jose Blossom</a>
+            <a href="#">San Jose Willow Glen</a>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <h5 style="color:var(--deep-blue);">San Diego County</h5>
+          <div class="location-list">
+            <a href="#">Carlsbad</a>
+            <a href="#">Poway</a>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <h5 style="color:var(--deep-blue);">Los Angeles County</h5>
+          <div class="location-list">
+            <a href="#">Culver City</a>
+            <a href="#">Harbor City</a>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <h5 style="color:var(--deep-blue);">Alameda County</h5>
+          <div class="location-list"><a href="#">Fremont</a></div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <h5 style="color:var(--deep-blue);">San Francisco</h5>
+          <div class="location-list"><a href="#">San Francisco</a></div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <h5 style="color:var(--deep-blue);">Denver</h5>
+          <div class="location-list"><a href="#">Highlands Ranch</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <section class="section">
+  <section class="section" style="background: rgba(255,255,255,0.6);">
     <div class="container text-center">
       <p style="font-size:1.1rem; max-width:600px; margin:0 auto 40px;">We'd love to help. Send us an email using one of the buttons below and a Splashes representative will get back to you as soon as possible.</p>
       <div class="row">
@@ -69,50 +126,6 @@
         <div class="col-md-3 col-6 mb-4"><div class="icon-btn"><img src="images/icon-buttons/compliment.svg" alt="Compliment"><p>Share a Compliment</p></div></div>
         <div class="col-md-3 col-6 mb-4"><div class="icon-btn"><img src="images/icon-buttons/form.svg" alt="Form"><p>Water Safety Presentation Inquiry</p></div></div>
         <div class="col-md-3 col-6 mb-4"><div class="icon-btn"><img src="images/icon-buttons/baby.svg" alt="Baby"><p>Parent & Me Lesson Interest</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" style="background: rgba(255,255,255,0.6);">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="contact-form">
-            <h3 style="font-family:'Bodoni Moda','Boogaloo',cursive; color:var(--deep-blue); margin-bottom:25px;">Send Us a Message</h3>
-            <form id="contactForm">
-              <div class="form-group">
-                <label for="formName">Your Name</label>
-                <input type="text" class="form-control" id="formName" placeholder="Your full name">
-                <div class="invalid-feedback">Please enter your name.</div>
-              </div>
-              <div class="form-group">
-                <label for="formEmail">Email Address</label>
-                <input type="email" class="form-control" id="formEmail" placeholder="email@example.com">
-                <div class="invalid-feedback">Please enter a valid email.</div>
-              </div>
-              <div class="form-group">
-                <label for="formPhone">Phone Number</label>
-                <input type="tel" class="form-control" id="formPhone" placeholder="(555) 123-4567">
-              </div>
-              <div class="form-group">
-                <label for="formSubject">Subject</label>
-                <select class="form-control" id="formSubject">
-                  <option value="">-- Select a subject --</option>
-                  <option value="general">General Inquiry</option>
-                  <option value="registration">Class Registration</option>
-                  <option value="feedback">Feedback</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="formMessage">Message</label>
-                <textarea class="form-control" id="formMessage" rows="5" placeholder="How can we help?"></textarea>
-                <div class="invalid-feedback">Please enter a message.</div>
-              </div>
-              <button type="submit" class="btn btn-spongebob btn-block">Send Message</button>
-            </form>
-          </div>
-        </div>
       </div>
     </div>
   </section>
