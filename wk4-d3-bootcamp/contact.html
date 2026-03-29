@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Splashes | Contact Us</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Splashes 🌊</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+        <button class="btn btn-register" data-toggle="modal" data-target="#authModal">Register / Sign In</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="authModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Welcome to Splashes! 🍍</h5>
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#registerTab">Register</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#signinTab">Sign In</a></li>
+          </ul>
+          <div class="tab-content mt-3">
+            <div class="tab-pane fade show active" id="registerTab">
+              <form id="registerForm">
+                <div class="form-group">
+                  <label for="regName">Full Name</label>
+                  <input type="text" class="form-control" id="regName" required>
+                </div>
+                <div class="form-group">
+                  <label for="regEmail">Email</label>
+                  <input type="email" class="form-control" id="regEmail" required>
+                </div>
+                <div class="form-group">
+                  <label for="regPassword">Password</label>
+                  <input type="password" class="form-control" id="regPassword" required>
+                </div>
+                <div class="form-group">
+                  <label for="regConfirm">Confirm Password</label>
+                  <input type="password" class="form-control" id="regConfirm" required>
+                </div>
+                <button type="submit" class="btn btn-spongebob btn-block">Register</button>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="signinTab">
+              <form id="signinForm">
+                <div class="form-group">
+                  <label for="signEmail">Email</label>
+                  <input type="email" class="form-control" id="signEmail" required>
+                </div>
+                <div class="form-group">
+                  <label for="signPassword">Password</label>
+                  <input type="password" class="form-control" id="signPassword" required>
+                </div>
+                <button type="submit" class="btn btn-spongebob btn-block">Sign In</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Contact Us 📬</h1>
+      <p class="lead" style="color: #E0F7FA;">We'd love to hear from you!</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 mb-4">
+          <div class="contact-form">
+            <h3 style="font-family: 'Boogaloo', cursive; color: var(--deep-blue); margin-bottom: 25px;">Send Us a Message</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="formName">Your Name</label>
+                <input type="text" class="form-control" id="formName" placeholder="SpongeBob SquarePants">
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+              <div class="form-group">
+                <label for="formEmail">Email Address</label>
+                <input type="email" class="form-control" id="formEmail" placeholder="spongebob@bikinibottom.com">
+                <div class="invalid-feedback">Please enter a valid email.</div>
+              </div>
+              <div class="form-group">
+                <label for="formPhone">Phone Number</label>
+                <input type="tel" class="form-control" id="formPhone" placeholder="(555) 123-4567">
+              </div>
+              <div class="form-group">
+                <label for="formSubject">Subject</label>
+                <select class="form-control" id="formSubject">
+                  <option value="">-- Select a subject --</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="registration">Class Registration</option>
+                  <option value="feedback">Feedback</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="formMessage">Message</label>
+                <textarea class="form-control" id="formMessage" rows="5" placeholder="Tell us what's on your mind..."></textarea>
+                <div class="invalid-feedback">Please enter a message.</div>
+              </div>
+              <button type="submit" class="btn btn-spongebob btn-block">Send Message 🚀</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-md-5 mb-4">
+          <div class="contact-info mb-4">
+            <h5 style="font-family: 'Boogaloo', cursive;">📍 Our Location</h5>
+            <p>124 Conch Street<br>Bikini Bottom, Pacific Ocean 00001</p>
+          </div>
+          <div class="contact-info mb-4">
+            <h5 style="font-family: 'Boogaloo', cursive;">📞 Phone</h5>
+            <p>(555) SPONGE-1<br>(555) 776-6431</p>
+          </div>
+          <div class="contact-info mb-4">
+            <h5 style="font-family: 'Boogaloo', cursive;">✉️ Email</h5>
+            <p>swim@splashes-bb.com</p>
+          </div>
+          <div class="contact-info mb-4">
+            <h5 style="font-family: 'Boogaloo', cursive;">🕐 Hours of Operation</h5>
+            <ul style="list-style: none; padding: 0;">
+              <li>Monday - Friday: 8:00 AM - 6:00 PM</li>
+              <li>Saturday: 8:00 AM - 4:00 PM</li>
+              <li>Sunday: Closed (Jellyfishing Day!)</li>
+            </ul>
+          </div>
+          <div class="map-placeholder">
+            📍 Bikini Bottom Map Coming Soon!
+          </div>
+          <p class="mt-4">
+            Looking for class info? Visit our <a href="classes.html">Classes page</a> or learn more <a href="about.html">About Us</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5>Contact Info</h5>
+          <ul>
+            <li>📍 124 Conch Street, Bikini Bottom</li>
+            <li>📞 (555) SPONGE-1</li>
+            <li>✉️ swim@splashes-bb.com</li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5>Follow Us</h5>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Splashes Swimming. All rights reserved. 🍍</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" title="Back to Top">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

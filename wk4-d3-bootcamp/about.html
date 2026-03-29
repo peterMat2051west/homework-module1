@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Splashes | About Us</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Splashes 🌊</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <button class="btn btn-register" data-toggle="modal" data-target="#authModal">Register / Sign In</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="authModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Welcome to Splashes! 🍍</h5>
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#registerTab">Register</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#signinTab">Sign In</a></li>
+          </ul>
+          <div class="tab-content mt-3">
+            <div class="tab-pane fade show active" id="registerTab">
+              <form id="registerForm">
+                <div class="form-group">
+                  <label for="regName">Full Name</label>
+                  <input type="text" class="form-control" id="regName" required>
+                </div>
+                <div class="form-group">
+                  <label for="regEmail">Email</label>
+                  <input type="email" class="form-control" id="regEmail" required>
+                </div>
+                <div class="form-group">
+                  <label for="regPassword">Password</label>
+                  <input type="password" class="form-control" id="regPassword" required>
+                </div>
+                <div class="form-group">
+                  <label for="regConfirm">Confirm Password</label>
+                  <input type="password" class="form-control" id="regConfirm" required>
+                </div>
+                <button type="submit" class="btn btn-spongebob btn-block">Register</button>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="signinTab">
+              <form id="signinForm">
+                <div class="form-group">
+                  <label for="signEmail">Email</label>
+                  <input type="email" class="form-control" id="signEmail" required>
+                </div>
+                <div class="form-group">
+                  <label for="signPassword">Password</label>
+                  <input type="password" class="form-control" id="signPassword" required>
+                </div>
+                <button type="submit" class="btn btn-spongebob btn-block">Sign In</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>About Splashes 🧽</h1>
+      <p class="lead" style="color: #E0F7FA;">Get to know our underwater crew!</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Our Story</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p style="font-size: 1.1rem; line-height: 1.8;">
+            Founded in the heart of Bikini Bottom, <strong>Splashes</strong> was born when SpongeBob SquarePants
+            realized that not everyone was as comfortable in the water as he was. After watching his best friend Patrick
+            struggle to float (despite living under the sea), SpongeBob gathered the best swimmers in town to create a
+            swimming school like no other.
+          </p>
+          <p style="font-size: 1.1rem; line-height: 1.8;">
+            Today, Splashes is the premier children's swimming academy in all of Bikini Bottom. Our team of certified
+            instructors brings passion, patience, and a whole lot of fun to every lesson. Whether your child is touching
+            water for the first time or training for the Bikini Bottom Junior Olympics, we have a class for them!
+          </p>
+        </div>
+        <div class="col-md-6 text-center">
+          <div style="font-size: 6rem; line-height: 1.4;">🧽⭐🐿️🦑</div>
+          <p style="font-family: 'Boogaloo', cursive; font-size: 1.5rem; color: var(--deep-blue);">The Dream Team</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: rgba(255,255,255,0.6);">
+    <div class="container">
+      <h2 class="section-title">Meet Our Instructors</h2>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card instructor-card h-100">
+            <div class="card-body">
+              <div class="instructor-emoji">🧽</div>
+              <h5 class="card-title">SpongeBob</h5>
+              <p class="text-muted">Head Instructor</p>
+              <p class="card-text">The most enthusiastic swimming teacher you'll ever meet! Specializes in bubble
+                techniques and making every kid feel like a champion.</p>
+              <span class="badge badge-success">Beginner Specialist</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card instructor-card h-100">
+            <div class="card-body">
+              <div class="instructor-emoji">⭐</div>
+              <h5 class="card-title">Patrick</h5>
+              <p class="text-muted">Float Coach</p>
+              <p class="card-text">Nobody knows floating better than Patrick! His relaxed teaching style helps nervous
+                swimmers find their confidence in the water.</p>
+              <span class="badge badge-success">Beginner Specialist</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card instructor-card h-100">
+            <div class="card-body">
+              <div class="instructor-emoji">🐿️</div>
+              <h5 class="card-title">Sandy</h5>
+              <p class="text-muted">Dive Expert</p>
+              <p class="card-text">This Texas-born underwater explorer brings scientific precision and Southern
+                enthusiasm to every dive lesson. Yeehaw!</p>
+              <span class="badge badge-warning">Intermediate Specialist</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card instructor-card h-100">
+            <div class="card-body">
+              <div class="instructor-emoji">🦑</div>
+              <h5 class="card-title">Squidward</h5>
+              <p class="text-muted">Technique Master</p>
+              <p class="card-text">With his graceful tentacle movements, Squidward teaches the art of elegant swimming.
+                Expect perfection and beautiful form.</p>
+              <span class="badge badge-warning">Intermediate Specialist</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Our Values</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <ul style="list-style: none; padding: 0;">
+            <li class="mb-4 p-3"
+              style="background: rgba(255,255,255,0.8); border-radius: 15px; border-left: 5px solid var(--spongebob-yellow);">
+              <h5 style="font-family: 'Boogaloo', cursive; color: var(--deep-blue);">🎉 Fun</h5>
+              <p class="mb-0">Every lesson is an adventure! We believe kids learn best when they're having a blast.</p>
+            </li>
+            <li class="mb-4 p-3"
+              style="background: rgba(255,255,255,0.8); border-radius: 15px; border-left: 5px solid var(--ocean-blue);">
+              <h5 style="font-family: 'Boogaloo', cursive; color: var(--deep-blue);">🛡️ Safety</h5>
+              <p class="mb-0">Water safety is our top priority. Every instructor is certified and our facilities meet
+                the highest standards.</p>
+            </li>
+            <li class="mb-4 p-3"
+              style="background: rgba(255,255,255,0.8); border-radius: 15px; border-left: 5px solid var(--kelp-green);">
+              <h5 style="font-family: 'Boogaloo', cursive; color: var(--deep-blue);">🏆 Excellence</h5>
+              <p class="mb-0">We strive for the best in everything we do, from teaching techniques to facility
+                maintenance.</p>
+            </li>
+            <li class="mb-4 p-3"
+              style="background: rgba(255,255,255,0.8); border-radius: 15px; border-left: 5px solid var(--patrick-pink);">
+              <h5 style="font-family: 'Boogaloo', cursive; color: var(--deep-blue);">🤝 Friendship</h5>
+              <p class="mb-0">Just like SpongeBob and Patrick, the bonds formed at Splashes last a lifetime!</p>
+            </li>
+          </ul>
+          <p class="text-center mt-4">
+            <a href="classes.html" class="btn btn-spongebob">Check Out Our Classes</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5>Contact Info</h5>
+          <ul>
+            <li>📍 124 Conch Street, Bikini Bottom</li>
+            <li>📞 (555) SPONGE-1</li>
+            <li>✉️ swim@splashes-bb.com</li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5>Follow Us</h5>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Splashes Swimming. All rights reserved. 🍍</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" title="Back to Top">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
