@@ -1,0 +1,427 @@
+/* =====================
+   HEADER
+===================== */
+#home header {
+    background: url(images/greatCliffs.png) center center no-repeat;
+    background-size: cover;
+    height: 250px;
+}
+
+#activities header {
+    background: no-repeat lightgrey url(images/runfly.jpg);
+    background-size: 1500px;
+    height: 250px;
+}
+
+#contact header {
+    background: no-repeat lightgrey url(images/cliff_rock.jpg);
+    background-size: 1500px;
+    height: 250px;
+}
+
+#cliffs header {
+    background: no-repeat lightgrey url(images/forest_cliff.jpg);
+    background-size: 1500px;
+    height: 250px;
+}
+
+.main-header {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 800px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    overflow: hidden;
+}
+
+.logo {
+    float: left;
+}
+
+.main-menu {
+    float: right;
+    padding-top: 50px;
+}
+
+/* =====================
+   NAVIGATION
+===================== */
+nav li {
+    list-style-type: none;
+    display: inline;
+    border-right: 1px solid #555;
+}
+
+nav li:last-child {
+    border-right: none;
+}
+
+nav a:link,
+nav a:visited {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 15px;
+}
+
+nav a:hover {
+    color: #9ed034;
+}
+
+nav a:active {
+    color: #ccc;
+}
+
+.active a:link,
+.active a:visited {
+    background-color: #9ed034;
+    color: #000;
+    padding: 4px 15px;
+}
+
+/* =====================
+   HOME - CLOCK
+===================== */
+#timeofday {
+    text-align: center;
+    padding: 10px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #125688;
+    background: linear-gradient(0deg, rgba(251,215,139,1) 0%, rgba(118,213,245,1) 100%);
+}
+
+/* =====================
+   MAIN
+===================== */
+main {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    padding: 20px 40px;
+}
+
+#home main {
+    color: #9ed034;
+}
+
+main h2 {
+    font-size: 2em;
+}
+
+main p {
+    color: #333;
+}
+
+/* =====================
+   PARTNERS (SECTION)
+===================== */
+#partners {
+    list-style-type: none;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+}
+
+#partners .partner {
+    display: inline-block;
+    margin: 10px;
+}
+
+#partners .partner img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+/* =====================
+   Activities
+===================== */
+table {
+    width: 1000px;
+    margin: 4em auto 0 auto;
+    border-collapse: collapse;
+}
+
+caption {
+    background: #852B1B;
+    height: 40px;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-top: 1em;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+thead th {
+    background-color: #6b9bc2;
+    color: #fff;
+    font-weight: bold;
+}
+
+tbody td:first-child {
+    font-weight: bold;
+    background-color: #d6eaf8;
+}
+
+td.tdhighlight {
+    background-color: #9ed034;
+    color: #fff;
+    font-weight: bold;
+}
+
+#activities main #displaySelected {
+    visibility: hidden;
+    margin: 0 auto;
+    width: 600px;
+    border: 2px solid #9ed034;
+    padding: 0.75em;
+}
+
+#activities main #displaySelected #result, #activities main #displaySelected #sendinfo {
+    display: inline-block;
+    margin: 0;
+}
+
+#activities main #result {
+    min-height: 50px;
+    width: 300px;
+    padding: 0;
+}
+
+#activities main #result h4 {
+    margin-bottom: 1em;
+    font-size: 1.15em;
+}
+
+#activities main #displaySelected #sendinfo input[type="email"] {
+    width: 200px;
+}
+
+/* =====================
+   CONTACT
+===================== */
+.contactinfo {
+    display: flex;
+    gap: 40px;
+    margin: 20px 0 30px;
+}
+
+.contactinfo span:first-child {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px 30px 30px;
+    border-radius: 4px;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+.textbox {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.textbox label {
+    font-weight: bold;
+}
+
+.textbox input {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+
+.radios {
+    margin-bottom: 20px;
+}
+
+.radios label:first-child {
+    font-weight: bold;
+    margin-right: 16px;
+}
+
+.radios input[type="radio"] {
+    margin-left: 16px;
+    margin-right: 4px;
+}
+
+.radios input[type="radio"]:first-of-type {
+    margin-left: 0;
+}
+
+.selectmenu {
+    margin-bottom: 20px;
+}
+
+.selectmenu label {
+    font-weight: bold;
+    margin-right: 12px;
+}
+
+.selectmenu select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+
+.commentbox {
+    margin-bottom: 20px;
+}
+
+.commentbox label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.commentbox textarea {
+    width: 100%;
+    height: 100px;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.button input[type="submit"] {
+    /*background-color: #9ed034;*/
+    color: #000;
+    border: none;
+    padding: 10px 30px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button input[type="submit"]:hover {
+    background-color: #8abc2a;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 40px;
+    overflow: hidden;
+}
+
+.copy {
+    float: left;
+}
+
+.social {
+    float: right;
+}
+
+#disclaimer {
+    clear: both;
+    color: #aaa;
+    font-size: 12px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+}
+
+/* =====================
+   SOCIAL MEDIA ICONS (Font Awesome)
+===================== */
+.social a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 12px 14px;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.social a:hover {
+    background-color: #9ed034;
+    color: #000;
+}
+
+.social a.fa-facebook {
+    background-color: #3b5998;
+    border-radius: 50%;
+}
+
+.social a.fa-twitter {
+    background-color: #1da1f2;
+    border-radius: 50%;
+}
+
+.social a.fa-instagram {
+    background-color: #c13584;
+    border-radius: 50%;
+}
+
+.social a.fa-facebook:hover {
+    background-color: #2d4373;
+}
+
+.social a.fa-twitter:hover {
+    background-color: #0d8ecf;
+}
+
+.social a.fa-instagram:hover {
+    background-color: #8a1a5a;
+}
+
+footer #nondisclaimer .social .fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+/* =====================
+   CLIFFS
+===================== */
+.cliff-sites {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.cliff-card {
+    width: 45%;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.cliff-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cliff-card h2 {
+    font-size: 1.3em;
+    color: #333;
+    padding: 12px 16px 0;
+}
+
+.cliff-card p {
+    padding: 8px 16px 16px;
+    color: #555;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
