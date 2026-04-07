@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 1 - Change in Message When Viewport is Resize</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        .message-box {
+            background-color: antiquewhite;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .xs-text { display: inline; color: gray; }
+        .sm-text { display: none; }
+        .md-text { display: none; }
+        .lg-text { display: none; }
+        .xl-text { display: none; }
+
+        @media (min-width: 576px) {
+            .xs-text { display: none; }
+            .sm-text { display: inline; }
+        }
+
+        @media (min-width: 768px) {
+            .sm-text { display: none; }
+            .md-text { display: inline; }
+        }
+
+        @media (min-width: 992px) {
+            .md-text { display: none; }
+            .lg-text { display: inline; }
+        }
+
+        @media (min-width: 1200px) {
+            .lg-text { display: none; }
+            .xl-text { display: inline; }
+        }
+    </style>
+</head>
+<body>
+    <h2>Change in Message When Viewport is Resize</h2>
+    <div class="message-box">
+        <span class="xs-text" style="color: gray;">Responsive <span style="font-size: 0.9rem;">as in..</span></span>
+        <span class="sm-text"><span style="color: gray;">Responsive </span><span style="color: red;">Web Design</span></span>
+        <span class="md-text"><span style="color: teal; font-weight: bold;">RWD: </span><span style="color: gray;">Responsive </span><span style="color: red;">Web Design</span></span>
+        <span class="lg-text"><span style="color: teal; font-size: 0.9rem;">You Are Learning </span><span style="color: gray;">Responsive </span><span style="color: red;">Web Design</span></span>
+        <span class="xl-text"><span style="color: magenta;">Learn </span><span style="color: gray;">Responsively!</span></span>
+    </div>
+</body>
+</html>
