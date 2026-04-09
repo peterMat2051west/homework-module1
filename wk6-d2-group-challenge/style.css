@@ -1,0 +1,25 @@
+/* Switched all CSS (except body) to Bootstrap utility classes in the HTML. */
+/* Original .row div, #viewport-size, and .container rules deactivated below. */
+
+/*
+.row div {
+  color: #fff;
+  background-color: darkblue;
+  border: 1px solid lightgray;
+  margin: 5px 0;
+}
+
+#viewport-size {
+  background: lightblue;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.container {
+  margin-bottom: 60px;
+}
+*/
+
+body {
+  margin: 10px;
+}
