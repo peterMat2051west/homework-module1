@@ -14,16 +14,16 @@
             this.age = Age;
             //Method
             this.getFullName = function () {
-                return this.firstName + " " + this.lastName;
+                return this.firstName + " " + this.lastName + " " + this.age;
             }
         };
 
         //Create object 1
-        var person1 = new Person('Steve', 'Jobs', 56);
+        var person1 = new Person('Steve', 'Jobs', '56');
         alert(person1.getFullName());
 
         //Create object 2
-        var person2 = new Person('Bill', 'Gates', 65);
+        var person2 = new Person('Bill', 'Gates', '65');
         alert(person2.getFullName());
 
     </script>
