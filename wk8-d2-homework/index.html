@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Food Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #leftside {
+            float: left;
+            width: 30%;
+            min-height: 1200px;
+            background-color: rgb(77, 192, 154);
+        }
+
+        #rightside {
+            float: left;
+            width: 70%;
+            min-height: 1200px;
+            background-color: rgb(238, 226, 192);
+            position: relative;
+        }
+
+        #container {
+            background-color: rgba(255, 255, 255, 0.85);
+            position: absolute;
+            top: 15%;
+            left: 15%;
+            min-width: 1100px;
+            min-height: 1050px;
+            border-radius: 0.7em;
+        }
+
+        header {
+            height: 50px;
+            background-color: rgba(231, 229, 229, 0.5);
+            font-size: 2.75em;
+            padding: 0.5em;
+            color: rgb(216, 150, 7);
+        }
+
+        header span {
+            font-family: 'Sacramento', cursive;
+        }
+
+        main {
+            position: relative;
+        }
+
+        main h2 {
+            position: absolute;
+            left: 20%;
+            top: 30px;
+            margin: 25px 0 200px 50px;
+            color: rgb(60, 190, 160);
+            text-transform: uppercase;
+        }
+
+        main #photos img {
+            margin: 0.75em;
+            border: 0.85em solid rgb(255, 255, 255);
+        }
+
+        section#blogposts {
+            position: absolute;
+            left: 20%;
+            top: 70px;
+            padding: 50px;
+        }
+
+        main .post {
+            margin: 25px;
+            padding: 25px;
+            border: 2px solid rgba(83, 78, 58, 0.6);
+            border-radius: 0.5em;
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 18px;
+        }
+
+        .profile-button {
+            padding: 0;
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        .profile-button img {
+            display: block;
+            width: 42px;
+            height: 42px;
+            border-radius: 0.35em;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .profile-button:hover img {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            width: 100%;
+        }
+
+        .author {
+            font-weight: 700;
+        }
+
+        .reply {
+            margin-left: auto;
+            font-size: 0.85em;
+            font-weight: 700;
+            color: rgb(120, 97, 32);
+        }
+
+        .author-card-backdrop {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.2);
+            z-index: 999;
+        }
+
+        .author-card {
+            position: relative;
+            width: min(360px, calc(100vw - 40px));
+            padding: 24px;
+            border-radius: 18px;
+            background: rgba(22, 22, 22, 0.94);
+            color: rgb(255, 255, 255);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        .author-card h3 {
+            margin: 0 0 16px;
+            font-size: 2.1em;
+        }
+
+        .author-card-close {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            border: 0;
+            background: transparent;
+            color: rgb(255, 255, 255);
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        .author-label {
+            display: block;
+            margin-top: 14px;
+            font-weight: 700;
+        }
+
+        .author-card p {
+            margin: 6px 0 0;
+            line-height: 1.45;
+        }
+
+        .author-card-close-text {
+            margin-top: 18px;
+            padding: 8px 14px;
+            border: 0;
+            border-radius: 999px;
+            background-color: rgb(77, 192, 154);
+            color: rgb(20, 20, 20);
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            height: 50px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+
+<body>
+    <aside id="leftside"></aside>
+    <aside id="rightside"></aside>
+    <div id="container">
+        <app-header :title="headerTitle"></app-header>
+
+        <main>
+            <app-photos :image="photoData"></app-photos>
+            <h2>{{ commentsTitle }}</h2>
+            <section id="blogposts">
+                <app-blog-post v-for="post in blogPosts" :key="post.id" :post="post" :profile-image="profileImage"
+                    @show-bio="showBio">
+                </app-blog-post>
+            </section>
+        </main>
+
+        <div v-if="selectedPost" class="author-card-backdrop" @click.self="closeBio">
+            <div class="author-card" role="dialog" aria-modal="true" :aria-label="selectedPost.author + ' profile'">
+                <button type="button" class="author-card-close" @click="closeBio" aria-label="Close">&times;</button>
+                <h3>{{ selectedPost.author }}</h3>
+                <span class="author-label">Foodie Level:</span>
+                <p>{{ selectedPost.foodieLevel }}</p>
+                <span class="author-label">Bio:</span>
+                <p>{{ selectedPost.bio }}</p>
+                <button type="button" class="author-card-close-text" @click="closeBio">Close</button>
+            </div>
+        </div>
+
+        <app-footer :copyright="footerCopyright"></app-footer>
+    </div>
+
+    <script>
+        // Header Component
+        Vue.component('app-header', {
+            template: '<header><span>{{ title }}</span></header>',
+            props: ['title']
+        });
+
+        // Photos Component
+        Vue.component('app-photos', {
+            template: '<aside id="photos"><img :src="image.src" :alt="image.alt" :width="image.width"></aside>',
+            props: ['image']
+        });
+
+        // Blog Post Component
+        Vue.component('app-blog-post', {
+            template: `
+                <div class="post">
+                    <div class="post-header">
+                        <button type="button" class="profile-button" @click="$emit('show-bio', post)">
+                            <img v-bind:src="profileImage.src" :alt="profileImage.alt">
+                        </button>
+                        <div class="post-meta">
+                            <span class="author">{{ post.author }}</span>
+                            <span class="date">- {{ post.date }}</span>
+                            <span class="reply">REPLY</span>
+                        </div>
+                    </div>
+                    <p>{{ post.content }}</p>
+                </div>
+            `,
+            props: ['post', 'profileImage']
+        });
+
+        // Footer Component
+        Vue.component('app-footer', {
+            template: '<footer>&copy; Copyright {{ copyright }}</footer>',
+            props: ['copyright']
+        });
+
+        // Vue Instance
+        new Vue({
+            el: '#container',
+            data: {
+                headerTitle: 'Food Blog',
+                commentsTitle: 'Comments',
+                footerCopyright: 'FOOD BLOG',
+                selectedPost: null,
+                photoData: {
+                    src: 'images/chili.jpg',
+                    alt: 'White Chicken Chili',
+                    width: 180
+                },
+                profileImage: {
+                    src: 'images/profile-placeholder.svg',
+                    alt: 'Profile placeholder'
+                },
+                blogPosts: [
+                    {
+                        id: 1,
+                        author: 'Brianna',
+                        date: 'February 18, 2021 @ 3:30 pm',
+                        content: 'Was amazing! My Walmart didn\'t have coriander in stock and didn\'t have ground cumin. I used serrano instead of jalapeno. It was just like my favorite tortilla soup from BJs. I am sending this recipe to my family. I want everyone to try it!',
+                        foodieLevel: 'Novice',
+                        bio: 'Food enthusiast. Love to cook and experiment. Into organic, fat-free, and sugar-free dishes.'
+                    },
+                    {
+                        id: 2,
+                        author: 'LINH',
+                        date: 'February 15, 2021 @ 9:46 am',
+                        content: 'I just made this soup today and it\'s so tasty! didn\'t have corn at home but still turned out very good. It\'s a winner! I made beef chili for my parents; but since my dad has gout he can\'t eat beef; this white chicken chili is perfect for him. Thank you Lisa!',
+                        foodieLevel: 'Expert',
+                        bio: 'Food is my happy place. I enjoy home cooking, trying fresh ingredients, and making comfort meals for my family.'
+                    },
+                    {
+                        id: 3,
+                        author: 'CATHERINE LEONARDO',
+                        date: 'February 13, 2021 @ 12:58 pm',
+                        content: 'I LOVE this White Chicken Chili! You are right, it is a satiating meal with toasted bread. Refreshingly different taste than any chicken chili I\'ve made in the past. I made it exactly as written and added some chopped zucchini, carrots, and celery. Instead of shredding the chicken, I chopped it into small pieces. It freezes very well. Will be an all-time favorite, for sure.',
+                        foodieLevel: 'Intermediate',
+                        bio: 'I like recipes that are hearty, practical, and easy to share. I usually add extra vegetables and save enough for leftovers.'
+                    },
+                    {
+                        id: 4,
+                        author: 'KALI',
+                        date: 'February 13, 2021 @ 11:31 am',
+                        content: 'This recipe is dynamite! My partner usually won\'t eat beans but he finished the whole pot (darn, I was hoping to have some for leftovers haha). This is a crowd-pleaser that I am going to add to my regular recipe rotation. Thanks so much, Lisa!',
+                        foodieLevel: 'Novice',
+                        bio: 'Food is my passion. I love to experiment and try new things. Invite me over for dinner and I will be there.'
+                    }
+                ]
+            },
+            methods: {
+                showBio: function (post) {
+                    this.selectedPost = post;
+                },
+                closeBio: function () {
+                    this.selectedPost = null;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
