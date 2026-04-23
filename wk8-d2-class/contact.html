@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-expand-xl fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html"><img src="images/header-splashes-logo-small.png" alt="Splashes"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarContent">
@@ -40,13 +43,17 @@
         </div>
         <div class="modal-body">
           <div class="row align-items-center">
-            <div class="col-4 text-center"><img src="images/shark-full.png" alt="Mascot" class="signin-shark"></div>
-            <div class="col-8">
+            <div class="col-sm-4 col-12 text-center"><img src="images/shark-full.png" alt="Mascot" class="signin-shark">
+            </div>
+            <div class="col-sm-8 col-12">
               <h4 style="font-family:'Poppins','Nunito',sans-serif; color:var(--deep-blue);">SIGN IN</h4>
               <form id="signinForm">
-                <div class="form-group"><label><em>Email *</em></label><input type="email" class="form-control" id="signEmail" required></div>
-                <div class="form-group"><label><em>Password *</em></label><input type="password" class="form-control" id="signPassword" required></div>
-                <p class="text-end"><a href="contact.html?subject=password-reset#contact-form-section" style="color:var(--ocean-blue);">Forgot Password?</a></p>
+                <div class="form-group"><label><em>Email *</em></label><input type="email" class="form-control"
+                    id="signEmail" required></div>
+                <div class="form-group"><label><em>Password *</em></label><input type="password" class="form-control"
+                    id="signPassword" required></div>
+                <p class="text-end"><a href="contact.html?subject=password-reset#contact-form-section"
+                    style="color:var(--ocean-blue);">Forgot Password?</a></p>
                 <button type="submit" class="btn btn-spongebob me-2">Sign In</button>
                 <a href="contact.html?subject=registration#contact-form-section" class="btn btn-patrick">Sign Up</a>
               </form>
@@ -58,21 +65,56 @@
   </div>
 
   <div class="page-header hero-image" style="background-image: url('images/contact-hero.jpeg');">
-    <div class="container"><h1>Contact Us</h1></div>
+    <div class="container">
+      <h1>Contact Us</h1>
+    </div>
   </div>
 
   <section class="section">
     <div class="container text-center">
-      <p style="font-size:1.1rem; max-width:600px; margin:0 auto 40px;">We'd love to help. Send us an email using one of the buttons below and a Splashes representative will get back to you as soon as possible.</p>
+      <p style="font-size:1.1rem; max-width:600px; margin:0 auto 40px;">We'd love to help. Send us an email using one of
+        the buttons below and a Splashes representative will get back to you as soon as possible.</p>
       <div class="row">
-        <div class="col-md-3 col-6 mb-4"><a class="icon-btn" href="contact.html?subject=customer-inquiry#contact-form-section"><img src="images/icon-buttons/question.svg" alt="Question"><p>Have a Customer Inquiry?</p></a></div>
-        <div class="col-md-3 col-6 mb-4"><a class="icon-btn" href="contact.html?subject=birthday-party#contact-form-section"><img src="images/icon-buttons/party-coordinator-form.svg" alt="Party"><p>Birthday Party Coordinator</p></a></div>
-        <div class="col-md-3 col-6 mb-4"><a class="icon-btn" href="contact.html?subject=concern#contact-form-section"><img src="images/icon-buttons/concern.svg" alt="Concern"><p>Voice a Concern</p></a></div>
-        <div class="col-md-3 col-6 mb-4"><a class="icon-btn" href="contact.html?subject=pool-rental#contact-form-section"><img src="images/icon-buttons/swimming-pool.svg" alt="Pool"><p>Pool Rental</p></a></div>
-        <div class="col-md-3 col-6 mb-4"><a class="icon-btn" href="contact.html?subject=suggestion#contact-form-section"><img src="images/icon-buttons/suggestion.svg" alt="Suggestion"><p>Give a Suggestion</p></a></div>
-        <div class="col-md-3 col-6 mb-4"><a class="icon-btn" href="contact.html?subject=compliment#contact-form-section"><img src="images/icon-buttons/compliment.svg" alt="Compliment"><p>Share a Compliment</p></a></div>
-        <div class="col-md-3 col-6 mb-4"><a class="icon-btn" href="contact.html?subject=safety-presentation#contact-form-section"><img src="images/icon-buttons/form.svg" alt="Form"><p>Water Safety Presentation Inquiry</p></a></div>
-        <div class="col-md-3 col-6 mb-4"><a class="icon-btn" href="contact.html?subject=parent-and-me#contact-form-section"><img src="images/icon-buttons/baby.svg" alt="Baby"><p>Parent & Me Lesson Interest</p></a></div>
+        <div class="col-md-3 col-sm-6 col-12 mb-4"><a class="icon-btn"
+            href="contact.html?subject=customer-inquiry#contact-form-section"><img
+              src="images/icon-buttons/question.svg" alt="Question">
+            <p>Have a Customer Inquiry?</p>
+          </a></div>
+        <div class="col-md-3 col-sm-6 col-12 mb-4"><a class="icon-btn"
+            href="contact.html?subject=birthday-party#contact-form-section"><img
+              src="images/icon-buttons/party-coordinator-form.svg" alt="Party">
+            <p>Birthday Party Coordinator</p>
+          </a></div>
+        <div class="col-md-3 col-sm-6 col-12 mb-4"><a class="icon-btn"
+            href="contact.html?subject=concern#contact-form-section"><img src="images/icon-buttons/concern.svg"
+              alt="Concern">
+            <p>Voice a Concern</p>
+          </a></div>
+        <div class="col-md-3 col-sm-6 col-12 mb-4"><a class="icon-btn"
+            href="contact.html?subject=pool-rental#contact-form-section"><img
+              src="images/icon-buttons/swimming-pool.svg" alt="Pool">
+            <p>Pool Rental</p>
+          </a></div>
+        <div class="col-md-3 col-sm-6 col-12 mb-4"><a class="icon-btn"
+            href="contact.html?subject=suggestion#contact-form-section"><img src="images/icon-buttons/suggestion.svg"
+              alt="Suggestion">
+            <p>Give a Suggestion</p>
+          </a></div>
+        <div class="col-md-3 col-sm-6 col-12 mb-4"><a class="icon-btn"
+            href="contact.html?subject=compliment#contact-form-section"><img src="images/icon-buttons/compliment.svg"
+              alt="Compliment">
+            <p>Share a Compliment</p>
+          </a></div>
+        <div class="col-md-3 col-sm-6 col-12 mb-4"><a class="icon-btn"
+            href="contact.html?subject=safety-presentation#contact-form-section"><img src="images/icon-buttons/form.svg"
+              alt="Form">
+            <p>Water Safety Presentation Inquiry</p>
+          </a></div>
+        <div class="col-md-3 col-sm-6 col-12 mb-4"><a class="icon-btn"
+            href="contact.html?subject=parent-and-me#contact-form-section"><img src="images/icon-buttons/baby.svg"
+              alt="Baby">
+            <p>Parent &amp; Me Lesson Interest</p>
+          </a></div>
       </div>
     </div>
   </section>
@@ -82,7 +124,8 @@
       <div class="row justify-content-center">
         <div class="col-md-8">
           <div class="contact-form">
-            <h3 style="font-family:'Poppins','Nunito',sans-serif; color:var(--deep-blue); margin-bottom:25px;">Send Us a Message</h3>
+            <h3 style="font-family:'Poppins','Nunito',sans-serif; color:var(--deep-blue); margin-bottom:25px;">Send Us a
+              Message</h3>
             <form id="contactForm">
               <div class="form-group">
                 <label for="formName">Your Name</label>
@@ -139,7 +182,8 @@
           <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">How do I enroll?</h5>
-              <p class="card-text">Use the register modal or the contact form and choose Class Registration so the team can match you with the right lesson.</p>
+              <p class="card-text">Use the register modal or the contact form and choose Class Registration so the team
+                can match you with the right lesson.</p>
             </div>
           </div>
         </div>
@@ -147,7 +191,8 @@
           <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">Which lesson should I pick?</h5>
-              <p class="card-text">Start on the Swimming Lessons page, compare the lesson types, then contact Splashes if you want help choosing.</p>
+              <p class="card-text">Start on the Swimming Lessons page, compare the lesson types, then contact Splashes
+                if you want help choosing.</p>
             </div>
           </div>
         </div>
@@ -155,7 +200,8 @@
           <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">Do you offer help by location?</h5>
-              <p class="card-text">Yes. Visit the Locations page, then use the contact form for scheduling, pool rental, or program availability questions.</p>
+              <p class="card-text">Yes. Visit the Locations page, then use the contact form for scheduling, pool rental,
+                or program availability questions.</p>
             </div>
           </div>
         </div>
@@ -167,7 +213,9 @@
     <div class="container">
       <div class="footer-logo"><img src="images/footer-logo-wave-small.png" alt="Splashes"></div>
       <div class="footer-links">
-        <a href="about.html">About</a><a href="locations.html">Locations</a><a href="contact.html#faqs">FAQs</a><a href="contact.html">Contact</a><a href="#" data-bs-toggle="modal" data-bs-target="#authModal">Register / Sign In</a><a href="contact.html?subject=careers#contact-form-section">Careers</a>
+        <a href="about.html">About</a><a href="locations.html">Locations</a><a href="contact.html#faqs">FAQs</a><a
+          href="contact.html">Contact</a><a href="#" data-bs-toggle="modal" data-bs-target="#authModal">Register / Sign
+          In</a><a href="contact.html?subject=careers#contact-form-section">Careers</a>
       </div>
       <div class="footer-social">
         <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
@@ -178,16 +226,35 @@
         <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
       </div>
       <div class="row text-center mb-4">
-        <div class="col"><h6>Orange County</h6><p>(949) 450-0727</p></div>
-        <div class="col"><h6>San Diego County</h6><p>(760) 603-9460</p></div>
-        <div class="col"><h6>Los Angeles County</h6><p>(626) 836-1200</p></div>
-        <div class="col"><h6>Northern California</h6><p>(408) 279-1700</p></div>
-        <div class="col"><h6>Denver</h6><p>(720) 344-7206</p></div>
+        <div class="col">
+          <h6>Orange County</h6>
+          <p>(949) 450-0727</p>
+        </div>
+        <div class="col">
+          <h6>San Diego County</h6>
+          <p>(760) 603-9460</p>
+        </div>
+        <div class="col">
+          <h6>Los Angeles County</h6>
+          <p>(626) 836-1200</p>
+        </div>
+        <div class="col">
+          <h6>Northern California</h6>
+          <p>(408) 279-1700</p>
+        </div>
+        <div class="col">
+          <h6>Denver</h6>
+          <p>(720) 344-7206</p>
+        </div>
       </div>
       <div class="sponsor-logo">
-        <img src="images/sponsors/footer-member-issa-logo.png" alt="ISSA"><img src="images/sponsors/footer-ndpa-logo.png" alt="NDPA"><img src="images/sponsors/footer-usssa-logo-2.png" alt="USSSA"><img src="images/sponsors/footer-stop-drowning-now-logo.png" alt="Stop Drowning Now">
+        <img src="images/sponsors/footer-member-issa-logo.png" alt="ISSA"><img
+          src="images/sponsors/footer-ndpa-logo.png" alt="NDPA"><img src="images/sponsors/footer-usssa-logo-2.png"
+          alt="USSSA"><img src="images/sponsors/footer-stop-drowning-now-logo.png" alt="Stop Drowning Now">
       </div>
-      <div class="footer-bottom"><p>&copy; 2026 Splashes. All Rights Reserved.</p></div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Splashes. All Rights Reserved.</p>
+      </div>
     </div>
   </footer>
 
@@ -196,4 +263,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="main.js"></script>
 </body>
+
 </html>

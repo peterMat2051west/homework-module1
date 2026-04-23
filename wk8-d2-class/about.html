@@ -12,10 +12,11 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-expand-xl fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html"><img src="images/header-splashes-logo-small.png" alt="Splashes"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarContent">
@@ -42,15 +43,17 @@
         </div>
         <div class="modal-body">
           <div class="row align-items-center">
-            <div class="col-4 text-center"><img src="images/shark-full.png" alt="Mascot" class="signin-shark"></div>
-            <div class="col-8">
+            <div class="col-sm-4 col-12 text-center"><img src="images/shark-full.png" alt="Mascot" class="signin-shark">
+            </div>
+            <div class="col-sm-8 col-12">
               <h4 style="font-family:'Poppins','Nunito',sans-serif; color:var(--deep-blue);">SIGN IN</h4>
               <form id="signinForm">
                 <div class="form-group"><label><em>Email *</em></label><input type="email" class="form-control"
                     id="signEmail" required></div>
                 <div class="form-group"><label><em>Password *</em></label><input type="password" class="form-control"
                     id="signPassword" required></div>
-                <p class="text-end"><a href="contact.html?subject=password-reset#contact-form-section" style="color:var(--ocean-blue);">Forgot Password?</a></p>
+                <p class="text-end"><a href="contact.html?subject=password-reset#contact-form-section"
+                    style="color:var(--ocean-blue);">Forgot Password?</a></p>
                 <button type="submit" class="btn btn-spongebob me-2">Sign In</button>
                 <a href="contact.html?subject=registration#contact-form-section" class="btn btn-patrick">Sign Up</a>
               </form>
