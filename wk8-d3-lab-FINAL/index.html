@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Splashes Aquatics - High quality swim instruction for all ages">
+  <title>Splashes Aquatics | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-xl fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="images/header-splashes-logo-small.png" alt="Splashes"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="swimming-lessons.html">Swimming Lessons</a></li>
+          <li class="nav-item"><a class="nav-link" href="swim-programs.html">Swim Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="adult-programs.html">Adult Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="locations.html">Locations</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+        <button class="btn btn-register" data-bs-toggle="modal" data-bs-target="#authModal">Register / Sign In</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="authModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="signin-modal-logo"><img src="images/logo-small.png" alt="Splashes Logo"></div>
+          <button type="button" class="close" data-bs-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div class="row align-items-center">
+            <div class="col-sm-4 col-12 text-center"><img src="images/shark-full.png" alt="Splashes Mascot"
+                class="signin-shark">
+            </div>
+            <div class="col-sm-8 col-12">
+              <h4 style="font-family:'Poppins','Nunito',sans-serif; color:var(--deep-blue);">SIGN IN</h4>
+              <form id="signinForm">
+                <div class="form-group">
+                  <label for="signEmail"><em>Email *</em></label>
+                  <input type="email" class="form-control" id="signEmail" required>
+                </div>
+                <div class="form-group">
+                  <label for="signPassword"><em>Password *</em></label>
+                  <input type="password" class="form-control" id="signPassword" required>
+                </div>
+                <p class="text-end"><a href="contact.html?subject=password-reset#contact-form-section"
+                    style="color:var(--ocean-blue);">Forgot Password?</a></p>
+                <button type="submit" class="btn btn-spongebob me-2">Sign In</button>
+                <a href="contact.html?subject=registration#contact-form-section" class="btn btn-patrick">Sign Up</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="hero hero-image" style="background-image: url('images/home.jpeg');">
+    <div class="container">
+      <h1>Learning it the Right Way,<br>Right from the Beginning</h1>
+      <a href="swimming-lessons.html" class="btn btn-spongebob me-2">Private Lessons</a>
+      <a href="swimming-lessons.html" class="btn btn-patrick">Group Lessons</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-5 mb-4">
+          <img src="images/home-hands-on-teaching.jpeg" alt="Hands on teaching"
+            style="border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+        </div>
+        <div class="col-md-7">
+          <h2 class="section-title" style="text-align:left;">Hands On Teaching</h2>
+          <p style="font-size:1.1rem; line-height:1.8;">Splashes Aquatics Swim School provides high quality swim
+            instruction and the ideal environment for learning how to swim. Our swim instructors use specialized "muscle
+            memory" teaching techniques that help our students progress at a quick rate. Grouped by age and ability, our
+            students benefit from swim classes that offer personalized attention. It's never too late to learn to swim!
+          </p>
+          <h5 style="margin-top:20px; color:var(--deep-blue);">Splashes Aquatics Offers:</h5>
+          <ul style="list-style:disc; padding-left:20px; font-size:1.05rem;">
+            <li>Private Swimming Lessons - All Locations</li>
+            <li>Semi-Private Swimming Lessons - All Locations</li>
+            <li>Parent & Me (Baby) Swimming Lessons - Select Locations</li>
+          </ul>
+          <a href="swimming-lessons.html" class="btn btn-spongebob mt-3">Ready to sign up?</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero hero-image"
+    style="background-image: url('images/home-our-locations-bg.jpeg'); clip-path: none; padding: 80px 0;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-5 text-center text-md-start">
+          <h2
+            style="color:var(--spongebob-yellow); font-family:'Poppins','Nunito',sans-serif; font-weight:700; font-size:2.5rem;">
+            Find a Splashes Swim School near you</h2>
+          <h4 style="color:#E0F7FA;">Family Swim School Locations</h4>
+          <p style="color:#fff;">Splashes Aquatics offers the finest professional swimming lessons from 21 swim schools
+            and aquatic centers in California and Denver.</p>
+          <a href="locations.html" class="btn btn-spongebob">View Locations</a>
+        </div>
+        <div class="col-md-7 text-center mt-4 mt-md-0">
+          <img src="images/home-our-locations-map.png" alt="Splashes Locations Map"
+            style="border-radius:15px; max-height:350px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Awards We've Won</h2>
+      <div class="awards-section">
+        <img src="images/awards/bay-area-parent-2019.jpeg" alt="Bay Area Parent 2019">
+        <img src="images/awards/bay-area-parent-gold2020.png" alt="Bay Area Parent Gold 2020">
+        <img src="images/awards/best-colorado-community-media-2021.jpeg" alt="Best of Colorado 2021">
+        <img src="images/awards/best-of-la-kids-winner.jpeg" alt="Best of LA Kids">
+        <img src="images/awards/best-of-the-best-2018.jpeg" alt="Best of the Best 2018">
+        <img src="images/awards/colorado-parenting-family-fav2019.jpeg" alt="Colorado Parenting Fav 2019">
+        <img src="images/awards/colorado-parenting-family-fav2020.png" alt="Colorado Parenting Fav 2020">
+        <img src="images/awards/colorado-parenting-family-fav2021.png" alt="Colorado Parenting Fav 2021">
+        <img src="images/awards/gold-daisy-award-finalist-2018.jpeg" alt="Gold Daisy Award 2018">
+        <img src="images/awards/mla-swim-lessons-winner-2020-250x250.png" alt="MLA Swim Lessons Winner 2020">
+        <img src="images/awards/website-parenting-oc-2019.jpeg" alt="Parenting OC 2019">
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo"><img src="images/footer-logo-wave-small.png" alt="Splashes"></div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="locations.html">Locations</a>
+        <a href="contact.html#faqs">FAQs</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#authModal">Register / Sign In</a>
+        <a href="contact.html?subject=careers#contact-form-section">Careers</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.google.com" target="_blank"><i class="fab fa-google"></i></a>
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="row text-center mb-4">
+        <div class="col">
+          <h6>Orange County</h6>
+          <p>(949) 450-0727</p>
+        </div>
+        <div class="col">
+          <h6>San Diego County</h6>
+          <p>(760) 603-9460</p>
+        </div>
+        <div class="col">
+          <h6>Los Angeles County</h6>
+          <p>(626) 836-1200</p>
+        </div>
+        <div class="col">
+          <h6>Northern California</h6>
+          <p>(408) 279-1700</p>
+        </div>
+        <div class="col">
+          <h6>Denver</h6>
+          <p>(720) 344-7206</p>
+        </div>
+      </div>
+      <div class="sponsor-logo">
+        <img src="images/sponsors/footer-member-issa-logo.png" alt="ISSA">
+        <img src="images/sponsors/footer-ndpa-logo.png" alt="NDPA">
+        <img src="images/sponsors/footer-usssa-logo-2.png" alt="USSSA">
+        <img src="images/sponsors/footer-stop-drowning-now-logo.png" alt="Stop Drowning Now">
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Splashes. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" title="Back to Top">&uarr;</button>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
