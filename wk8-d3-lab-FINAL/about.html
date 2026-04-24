@@ -22,7 +22,7 @@
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="swimming-lessons.html">Swimming Lessons</a></li>
           <li class="nav-item"><a class="nav-link" href="swim-programs.html">Swim Programs</a></li>
           <li class="nav-item"><a class="nav-link" href="adult-programs.html">Adult Programs</a></li>
@@ -39,21 +39,21 @@
       <div class="modal-content">
         <div class="modal-header">
           <div class="signin-modal-logo"><img src="images/logo-small.png" alt="Splashes Logo"></div>
-          <button type="button" class="close" data-bs-dismiss="modal"><span>&times;</span></button>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div class="row align-items-center">
             <div class="col-sm-4 col-12 text-center"><img src="images/shark-full.png" alt="Mascot" class="signin-shark">
             </div>
             <div class="col-sm-8 col-12">
-              <h4 style="font-family:'Poppins','Nunito',sans-serif; color:var(--deep-blue);">SIGN IN</h4>
+              <h4 class="signin-title">SIGN IN</h4>
               <form id="signinForm">
                 <div class="form-group"><label><em>Email *</em></label><input type="email" class="form-control"
                     id="signEmail" required></div>
                 <div class="form-group"><label><em>Password *</em></label><input type="password" class="form-control"
                     id="signPassword" required></div>
                 <p class="text-end"><a href="contact.html?subject=password-reset#contact-form-section"
-                    style="color:var(--ocean-blue);">Forgot Password?</a></p>
+                    class="signin-help-link">Forgot Password?</a></p>
                 <button type="submit" class="btn btn-spongebob me-2">Sign In</button>
                 <a href="contact.html?subject=registration#contact-form-section" class="btn btn-patrick">Sign Up</a>
               </form>
@@ -64,68 +64,66 @@
     </div>
   </div>
 
-  <div class="page-header hero-image" style="background-image: url('images/about-us-hero.jpeg');">
-    <div class="container">
-      <h1>About Splashes Aquatics</h1>
+  <main>
+    <div class="page-header hero-image" style="background-image: url('images/about-us-hero.jpeg');">
+      <div class="container">
+        <h1>About Splashes Aquatics</h1>
+      </div>
     </div>
-  </div>
 
-  <section class="section"
-    style="background: url('images/about-our-philosophy-bg.jpeg') center/cover; position:relative;">
-    <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(255,255,255,0.85);"></div>
-    <div class="container" style="position:relative;z-index:1;">
-      <h2 class="section-title">Our Philosophy</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-8 text-center">
-          <p style="font-size:1.15rem; line-height:1.9;">Our mission is to educate and motivate individuals to be safer
-            and learn proper swimming technique.</p>
-          <p style="font-size:1.15rem; line-height:1.9;">We have chosen to share our love of swimming with children and
-            believe there is a swimmer in every child. We pride ourselves on teaching the necessary skills needed to
-            become a comfortable, proficient swimmer right from the beginning.</p>
+    <section class="section bg-image-section bg-image-section--light"
+      style="background-image: url('images/about-our-philosophy-bg.jpeg');">
+      <div class="container">
+        <h2 class="section-title">Our Philosophy</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center">
+            <p class="lead-copy">Our mission is to educate and motivate individuals to be safer
+              and learn proper swimming technique.</p>
+            <p class="lead-copy">We have chosen to share our love of swimming with children and
+              believe there is a swimmer in every child. We pride ourselves on teaching the necessary skills needed to
+              become a comfortable, proficient swimmer right from the beginning.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section"
-    style="background: url('images/about-we-do-a-pretty-good-job-bg.jpeg') center/cover; position:relative;">
-    <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,64,128,0.6);"></div>
-    <div class="container text-center" style="position:relative;z-index:1;">
-      <h2
-        style="color:var(--spongebob-yellow); font-family:'Poppins','Nunito',sans-serif; font-weight:700; font-size:2.8rem;">
-        We Do A Pretty Good Job</h2>
-      <p style="color:#fff; font-size:1.15rem; max-width:700px; margin:20px auto;">Experience excellence through
-        Splashes' award-winning programs where safety, fast progress, and a fun environment come first. Join the swim
-        school that loves what they do and it shows.</p>
-      <a href="#testimonials" class="btn btn-spongebob mt-2">Hear What Families Are Saying About Us</a>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Awards We've Won</h2>
-      <div class="awards-section">
-        <img src="images/awards/bay-area-parent-2019.jpeg" alt="Bay Area Parent 2019">
-        <img src="images/awards/bay-area-parent-gold2020.png" alt="Bay Area Parent Gold 2020">
-        <img src="images/awards/best-colorado-community-media-2021.jpeg" alt="Best of Colorado 2021">
-        <img src="images/awards/best-of-la-kids-winner.jpeg" alt="Best of LA Kids">
-        <img src="images/awards/best-of-the-best-2018.jpeg" alt="Best of the Best 2018">
-        <img src="images/awards/colorado-parenting-family-fav2019.jpeg" alt="Colorado Fav 2019">
-        <img src="images/awards/colorado-parenting-family-fav2020.png" alt="Colorado Fav 2020">
-        <img src="images/awards/colorado-parenting-family-fav2021.png" alt="Colorado Fav 2021">
-        <img src="images/awards/gold-daisy-award-finalist-2018.jpeg" alt="Gold Daisy 2018">
-        <img src="images/awards/mla-swim-lessons-winner-2020-250x250.png" alt="MLA Winner 2020">
-        <img src="images/awards/website-parenting-oc-2019.jpeg" alt="Parenting OC 2019">
+    <section class="section bg-image-section bg-image-section--dark text-center"
+      style="background-image: url('images/about-we-do-a-pretty-good-job-bg.jpeg');">
+      <div class="container">
+        <h2 class="highlight-title">We Do A Pretty Good Job</h2>
+        <p class="page-intro text-white mt-3">Experience excellence through
+          Splashes' award-winning programs where safety, fast progress, and a fun environment come first. Join the swim
+          school that loves what they do and it shows.</p>
+        <a href="#testimonials" class="btn btn-spongebob mt-2">Hear What Families Are Saying About Us</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" id="testimonials" style="background: rgba(255,255,255,0.6);">
-    <div class="container">
-      <h2 class="section-title">Family Testimonials</h2>
-      <div id="ajax-testimonials"></div>
-    </div>
-  </section>
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Awards We've Won</h2>
+        <div class="awards-section">
+          <img src="images/awards/bay-area-parent-2019.jpeg" alt="Bay Area Parent 2019" loading="lazy">
+          <img src="images/awards/bay-area-parent-gold2020.png" alt="Bay Area Parent Gold 2020" loading="lazy">
+          <img src="images/awards/best-colorado-community-media-2021.jpeg" alt="Best of Colorado 2021" loading="lazy">
+          <img src="images/awards/best-of-la-kids-winner.jpeg" alt="Best of LA Kids" loading="lazy">
+          <img src="images/awards/best-of-the-best-2018.jpeg" alt="Best of the Best 2018" loading="lazy">
+          <img src="images/awards/colorado-parenting-family-fav2019.jpeg" alt="Colorado Fav 2019" loading="lazy">
+          <img src="images/awards/colorado-parenting-family-fav2020.png" alt="Colorado Fav 2020" loading="lazy">
+          <img src="images/awards/colorado-parenting-family-fav2021.png" alt="Colorado Fav 2021" loading="lazy">
+          <img src="images/awards/gold-daisy-award-finalist-2018.jpeg" alt="Gold Daisy 2018" loading="lazy">
+          <img src="images/awards/mla-swim-lessons-winner-2020-250x250.png" alt="MLA Winner 2020" loading="lazy">
+          <img src="images/awards/website-parenting-oc-2019.jpeg" alt="Parenting OC 2019" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-surface" id="testimonials">
+      <div class="container">
+        <h2 class="section-title">Family Testimonials</h2>
+        <div id="ajax-testimonials"></div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
@@ -136,12 +134,12 @@
           In</a><a href="contact.html?subject=careers#contact-form-section">Careers</a>
       </div>
       <div class="footer-social">
-        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
-        <a href="https://www.google.com" target="_blank"><i class="fab fa-google"></i></a>
-        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" aria-label="Google"><i class="fab fa-google"></i></a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
       </div>
       <div class="row text-center mb-4">
         <div class="col">

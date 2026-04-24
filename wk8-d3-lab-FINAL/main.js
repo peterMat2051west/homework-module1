@@ -11,7 +11,11 @@ function createBubble() {
   $("body").append($bubble);
   setTimeout(function () { $bubble.remove(); }, 10000);
 }
-setInterval(createBubble, 800);
+
+var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (!reduceMotion) {
+  setInterval(createBubble, 800);
+}
 
 $(document).ready(function () {
   var $navbar = $(".navbar");
@@ -50,25 +54,32 @@ $(document).ready(function () {
   // Ajax testimonials (jQuery $.get)
   var $testimonialContainer = $("#ajax-testimonials");
   if ($testimonialContainer.length) {
-    $.get("https://jsonplaceholder.typicode.com/posts?_limit=3")
-      .done(function (data) {
-        var names = ["Sarah M.", "The Johnson Family", "Coach Williams"];
-        var html = '<div class="row">';
-        $.each(data, function (i, post) {
-          html +=
-            '<div class="col-md-4 mb-4">' +
-            '<div class="card h-100"><div class="card-body text-center">' +
-            '<div style="font-size:2.5rem;margin-bottom:10px;">\u2B50</div>' +
-            '<p class="card-text fst-italic">"' + post.body.substring(0, 120) + '..."</p>' +
-            '<h5 class="card-title mt-3">- ' + names[i] + '</h5>' +
-            '</div></div></div>';
-        });
-        html += '</div>';
-        $testimonialContainer.html(html);
-      })
-      .fail(function () {
-        $testimonialContainer.html('<p class="text-center text-muted">Could not load testimonials.</p>');
-      });
+    var testimonials = [
+      {
+        name: "Sarah M.",
+        quote: "The instructors are patient, safety-focused, and great at helping kids feel confident in the water."
+      },
+      {
+        name: "The Johnson Family",
+        quote: "Our children made fast progress, and the staff made every lesson organized, clear, and fun."
+      },
+      {
+        name: "Coach Williams",
+        quote: "Splashes runs strong programs with clear instruction, supportive teachers, and a very welcoming environment."
+      }
+    ];
+    var html = '<div class="row">';
+    $.each(testimonials, function (_, testimonial) {
+      html +=
+        '<div class="col-md-4 mb-4">' +
+        '<div class="card h-100"><div class="card-body text-center">' +
+        '<div style="font-size:2.5rem;margin-bottom:10px;">\u2B50</div>' +
+        '<p class="card-text fst-italic">"' + testimonial.quote + '"</p>' +
+        '<h5 class="card-title mt-3">- ' + testimonial.name + '</h5>' +
+        '</div></div></div>';
+    });
+    html += '</div>';
+    $testimonialContainer.html(html);
   }
 
   // Contact form validation
@@ -87,7 +98,7 @@ $(document).ready(function () {
     if (!message) { $("#formMessage").addClass("is-invalid"); isValid = false; }
 
     if (isValid) {
-      alert("Thank you for contacting Splashes Aquatics! We'll get back to you soon. \uD83C\uDF0A");
+      alert("Thank you for contacting Splashes Aquatics! We'll get back to you soon.");
       this.reset();
     }
   });
@@ -102,8 +113,11 @@ $(document).ready(function () {
   // Sign in form
   $("#signinForm").on("submit", function (e) {
     e.preventDefault();
-    alert("Welcome back to Splashes! \uD83C\uDF0A");
-    $("#authModal").modal("hide");
+    alert("Welcome back to Splashes!");
+    var modalElement = document.getElementById("authModal");
+    if (modalElement && window.bootstrap) {
+      window.bootstrap.Modal.getOrCreateInstance(modalElement).hide();
+    }
     this.reset();
   });
 });

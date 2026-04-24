@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <header class="hero-header py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <p class="eyebrow mb-2">{{ blogLabel }}</p>
+                        <h1 class="display-4 hero-title mb-3">{{ headerTitle }}</h1>
+                        <p class="lead hero-copy mb-0">{{ headerSubtitle }}</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <app-nav :items="navItems"></app-nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <recipe-spotlight :recipe="recipe"></recipe-spotlight>
+                    </div>
+                    <div class="col-lg-8">
+                        <section class="comments-panel shadow-sm">
+                            <div class="d-md-flex justify-content-between align-items-center mb-4">
+                                <div class="mb-3 mb-md-0">
+                                    <p class="section-label mb-2">{{ sectionLabel }}</p>
+                                    <h2 class="h1 section-title mb-0">{{ commentsTitle }}</h2>
+                                </div>
+                                <span class="badge badge-pill comment-count px-3 py-2">{{ blogPosts.length }} comments</span>
+                            </div>
+
+                            <blog-post-card v-for="post in blogPosts" :key="post.id" :post="post"
+                                :profile-image="profileImage" @show-bio="showBio"></blog-post-card>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div v-if="selectedPost" class="author-modal" @click.self="closeBio">
+            <div class="author-dialog shadow">
+                <button type="button" class="close author-close" aria-label="Close" @click="closeBio">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <p class="section-label mb-2">Author Profile</p>
+                <h3 class="mb-3">{{ selectedPost.author }}</h3>
+                <p class="author-detail mb-2"><strong>Foodie Level:</strong> {{ selectedPost.foodieLevel }}</p>
+                <p class="author-detail mb-4"><strong>Bio:</strong> {{ selectedPost.bio }}</p>
+                <button type="button" class="btn btn-dark px-4" @click="closeBio">Close</button>
+            </div>
+        </div>
+
+        <site-footer :copyright="footerCopyright"></site-footer>
+    </div>
+</body>
+
+</html>
